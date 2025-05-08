@@ -11,9 +11,9 @@ from dotenv import load_dotenv
 from openai import AsyncOpenAI
 from collections import defaultdict
 from typing import Optional
-from manual_match import log_rpc_benchmark_vector_poc
-from validator import validate_user_input
-from mapper.mm_mapper import full_part_number_pipeline
+from .manual_match import log_rpc_benchmark_vector_poc
+from .validator import validate_user_input
+from .mm_mapper import full_part_number_pipeline
 
 DB_CONFIG = {
     "host": "localhost",

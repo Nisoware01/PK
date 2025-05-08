@@ -9,12 +9,12 @@ def full_part_number_pipeline(
     output_map: dict = {},
    
 ):
-    print(output_range_partnumber)
-    print(output_specs)
-    print(input_specs)
-    print(data_list)
-    print(input_map)
-    print(output_map)
+    # print(output_range_partnumber)
+    # print(output_specs)
+    # print(input_specs)
+    # print(data_list)
+    # print(input_map)
+    # print(output_map)
     # ✅ Early return if data_list is empty
     if not data_list:
         return input_specs or {}, output_specs, output_range_partnumber
