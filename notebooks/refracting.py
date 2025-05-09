@@ -8,7 +8,6 @@ from pgvector.psycopg2 import register_vector
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from dotenv import load_dotenv
-from openai import AsyncOpenAI
 from collections import defaultdict
 from typing import Optional, List, Dict, Any, Tuple
 from .manual_match import log_rpc_benchmark_vector_poc
@@ -109,7 +108,7 @@ async def match_parts(request: MatchRequest):
     """
     
     match_results = log_rpc_benchmark_vector_poc(request.part_number)
-    
+    print(len(match_results))
     if not match_results:
         return {"error": f"{request.part_number} not found."}
 

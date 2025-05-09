@@ -1,28 +1,30 @@
-version: '3.8'
+version: '3.4'
 
 services:
-  postgres:
-    image: ankane/pgvector
-    container_name: pgvector-db
-    environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydb
+  weaviate:
+    image: semitechnologies/weaviate:1.25.3
+    restart: always
     ports:
-      - "5432:5432"
+      - "8082:8080"  # Changed host port to avoid conflict
+      - "50051:50051"
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      ENABLE_MODULES: 'text2vec-transformers'
+      DEFAULT_VECTORIZER_MODULE: 'text2vec-transformers'
+      TRANSFORMERS_INFERENCE_API: 'http://transformers:8080'
+      CLUSTER_HOSTNAME: 'node1'
     volumes:
-      - pgdata:/var/lib/postgresql/data
-
-  pgadmin:
-    image: dpage/pgadmin4
-    container_name: pgadmin
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: admin
-    ports:
-      - "5050:80"
+      - weaviate_data:/var/lib/weaviate
     depends_on:
-      - postgres
+      - transformers
+
+  transformers:
+    image: semitechnologies/transformers-inference:sentence-transformers-all-mpnet-base-v2
+    restart: always
+    ports:
+      - "8081:8080"  # This is fine unless another process uses 8081
 
 volumes:
-  pgdata:
+  weaviate_data:

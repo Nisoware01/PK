@@ -4,7 +4,7 @@ import json
 import psycopg2
 from datetime import datetime
 from dotenv import load_dotenv
-from .static import get_static_part
+
 # Load environment variables if needed
 load_dotenv()
 
