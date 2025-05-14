@@ -8,7 +8,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # Function to get embeddings from OpenAI
 def get_embedding(text: str) -> np.ndarray:
     response = openai.Embedding.create(
-        model="text-embedding-3-small",  # You can use the appropriate model here
+        model="text-embedding-3-large",  # You can use the appropriate model here
         input=text
     )
     return np.array(response['data'][0]['embedding'])
@@ -33,8 +33,15 @@ def calculate_similarity(text1: str, text2: str) -> float:
     return similarity
 
 # Example usage
-text1 = "The acceptable length range for the component is from fifteen mm to twenty mm, increasing by one mm increments. When comparing this range with others, focus on identifying any overlapping or intersecting values within this interval."
-text2 = "The acceptable length range for the component is from twenty mm to twenty-five mm, increasing by 1 mm increments. When comparing this range with others, focus on identifying any overlapping or intersecting values within this interval."
+text1 = ("The acceptable values of length range for the component is from 15 mm to 20 mm, increase by 1 mm increments. When comparing this length with others, focus on identifying any overlapping or intersecting values within this length interval."
+"The acceptable values of diameter range for the component is from 100 mm to 200 mm, increase by 1 mm increments. When comparing this length with others, focus on identifying any overlapping or intersecting values within this length interval."
 
+)
+
+
+text2 = ("The acceptable values of length range for the component is from 20 mm to 25 mm, increase by 1 mm increments. When comparing this length with others, focus on identifying any overlapping or intersecting values within this length interval."
+"The acceptable values of diameter range for the component is from 150 mm to 200 mm, increase by 1 mm increments. When comparing this length with others, focus on identifying any overlapping or intersecting values within this length interval."
+
+)
 similarity_score = calculate_similarity(text1, text2)
 print(f"Cosine Similarity: {similarity_score}")
