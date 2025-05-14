@@ -12,7 +12,7 @@ def get_openai_response(prompt):
     
     if openai.api_key is None:
         return "Error: OPENAI_API_KEY environment variable is not set."
-
+    
     try:
         response = openai.ChatCompletion.create(  # <-- Corrected here
             model="gpt-3.5-turbo",

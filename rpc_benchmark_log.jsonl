@@ -452,3 +452,4 @@
 {"timestamp": "2025-05-09T05:11:18.056864", "part_number": "6", "total_time_ms": 224.35, "response_size": 0, "avg_server_duration_ms": null, "min_server_duration_ms": null, "max_server_duration_ms": null}
 {"timestamp": "2025-05-09T05:11:23.836701", "part_number": "60XL025GB", "total_time_ms": 87.3, "response_size": 2, "avg_server_duration_ms": 16.94, "min_server_duration_ms": 16.591, "max_server_duration_ms": 17.289}
 {"timestamp": "2025-05-09T05:11:37.830763", "part_number": "60XL025G", "total_time_ms": 113.42, "response_size": 1, "avg_server_duration_ms": 32.45, "min_server_duration_ms": 32.448, "max_server_duration_ms": 32.448}
+{"timestamp": "2025-05-13T03:21:57.110955", "part_number": "60XL025GB", "total_time_ms": 160.24, "response_size": 2, "avg_server_duration_ms": 66.09, "min_server_duration_ms": 65.197, "max_server_duration_ms": 66.987}

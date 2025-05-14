@@ -1,0 +1,5 @@
+{"timestamp": "2025-05-12T09:34:54.531316", "part_number": "MCC16-D6-L18-E2-F3-P4-Q3", "total_time_ms": 22.59, "response_size": 1, "avg_server_duration_ms": 0.47, "min_server_duration_ms": 0.47, "max_server_duration_ms": 0.47}
+{"timestamp": "2025-05-12T09:36:11.695166", "part_number": "SSFRQ6-15-F3-P4-T3-Q4", "total_time_ms": 32.21, "response_size": 1, "avg_server_duration_ms": 0.53, "min_server_duration_ms": 0.527, "max_server_duration_ms": 0.527}
+{"timestamp": "2025-05-12T09:37:21.035030", "part_number": "MCC16-D6-L18-E2-F3-P4-Q3", "total_time_ms": 33.39, "response_size": 1, "avg_server_duration_ms": 0.73, "min_server_duration_ms": 0.729, "max_server_duration_ms": 0.729}
+{"timestamp": "2025-05-12T09:37:40.633532", "part_number": "MCC16-D6-L18-E2-F3-P4-Q3", "total_time_ms": 22.78, "response_size": 1, "avg_server_duration_ms": 0.54, "min_server_duration_ms": 0.537, "max_server_duration_ms": 0.537}
+{"timestamp": "2025-05-12T09:39:33.368783", "part_number": "MCC16-D6-L18-E2-F3-P4-Q3", "total_time_ms": 41.7, "response_size": 1, "avg_server_duration_ms": 0.68, "min_server_duration_ms": 0.684, "max_server_duration_ms": 0.684}
